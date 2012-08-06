@@ -25,7 +25,15 @@ Author: Berlin Brown (berlin dot brown at gmail.com)
 
 ### Quick Start Usage
 
+* Add property key/value data to the H2 embedded sql database
+* Modify the conf/file/tmp/staging_load.properties file to add your key/value entries
+* Run bin/scripts/jdistprop-readall.bat to transfer from the property file in to the database
+* Run bin/jdistprop.bat to launch the jdistprop httpd web server
+* At this point, you just simply need to connect to the server to read your property files.
+
+<pre><code>
  final Properties prop = new Properties() ;
  final URL url = new URL("http://localhost:7191/servlet/db/default");        
  prop.load(url.openStream());
  prop.getProperty("key");
+</code></pre>
