@@ -22,3 +22,10 @@ One solution is to store that in a database? Are developers using memcache-db? I
 Would you use a solution outside of the java framework? Like a key/value datastore? memcachedb?
 
 Author: Berlin Brown (berlin dot brown at gmail.com)
+
+### Quick Start Usage
+
+ final Properties prop = new Properties() ;
+ final URL url = new URL("http://localhost:7191/servlet/db/default");        
+ prop.load(url.openStream());
+ prop.getProperty("key");
